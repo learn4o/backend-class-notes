@@ -1,0 +1,77 @@
+-> see videos, upload, delete
+-> user registration, edit profile
+-> rate videos
+-> comments
+-> channel - list, update, delete
+
+
+video
+user
+comments
+channel
+rate -> activity
+
+
+GET  /videos?search=technology  -> list videos
+[
+    {
+        "id": 12,
+        "title": "...",
+        "link": "https://storage.videos.com/id=12",
+        "stats": {
+            "views": 234,
+            "like": 24222,
+            "dislike": 123,
+            "duration": {
+                "unit": "minutes",
+                "value": 5
+            }
+        }
+    },
+    {
+        ...
+    }
+]
+
+GET /videos/<id>
+{..}
+
+POST /videos
+
+PUT /videos/<id>
+{}
+
+GET /users/<user-id>
+
+POST /users
+
+PUT /v1/users/<user-id> -> $ and INR
+PUT /v2/users/<user-id> -> $ and INR and pound
+
+GET  /videos/<id>/comments --> view all comments on <id> video
+POST /videos/<id>/comments --> add new comment
+PUT  /videos/<id>/comments/<comment-id>
+DELETE /videos/<id>/comments/<comment-id>
+
+PUT /videos/<id>/rate
+
+GET /channels?name=geo&sortBy=createdAt&order=desc
+POST /channels
+PUT /channels/<channel-id>
+DELETE /channels/<channel-id>
+
+
+CRUD -> Create, Read, Update, Delete
+
+GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS
+
+
+
+Create -> POST
+Read   -> GET
+Update -> PUT/POST
+Delete -> DELETE
+
+
+
+Idempotent -> 
