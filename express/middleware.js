@@ -11,11 +11,14 @@ function logRequest(req, res, next) {
 app.use(logRequest)
 
 app.get('/', function (req, res) {
-  res.send('GET method called on /')
+  res.send({
+      'firstName': 'Tarun',
+      'lastName': 'Chabarwal'
+  })
 })
 
 app.post('/', function (req, res) {
-    res.send('post method is called at /')
+    res.send('<h1>post method is called at /</h1>')
 })
 
 app.put('/', function (req, res) {
